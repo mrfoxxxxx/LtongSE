@@ -122,7 +122,7 @@ USERS_COVER | config.json中内容
 
 ![](https://draw-static.vercel.app/UnicomTask/开启Actions.gif)
 
-### 5.进行一次push操作
+### 5.进行一次push操作。
 
 `push`操作会触发工作流运行。
 
