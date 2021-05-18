@@ -275,6 +275,7 @@ def getStorageFlow(username):
     datas = []
     #获得所有流量包的标识并存储
     for li in ul:
+        print(li.text)
         data = {
             'activeCode': None,
             'prizeRecordID': None,
@@ -282,6 +283,7 @@ def getStorageFlow(username):
         }
         tran = {1:'activeCode',2:'prizeRecordID',3:'phone'}
         line = li.attrib.get('onclick')
+        print(line)
         #正则匹配字符串 toDetailPage('2534','20210307073111185674422127348889','18566669999');
         pattern = re.finditer(r'\'[\dA-Za-z]+\'',line)
         i = 1
@@ -422,7 +424,7 @@ def main(event, context):
             dongaoPoints_task()
             gameCenterSign_Task(user['username'])
             woTree_task()
-            actionFlow(user['username'])
+            #actionFlow(user['username'])
             monthOneG(user['username'])
             if ('autoKingCardType' in user) :
                 autoKingCardWelfare(user['autoKingCardType'])
